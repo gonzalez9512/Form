@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './Estilos.css';
+import { Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos,
+ContenedorBotonCentrado, Boton, MensajeExito, MensajeError  } from './Elementos/Formulario';
+import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    
+    <main>
+      
+      <Formulario action="">
 
-export default App;
+        <div>
+          <Label htmlFor="">Nombre</Label>
+          <GrupoInput>
+            <Input type= "text" placeholder="Nombre"/>
+            <IconoValidacion icon={faCheckCircle}/>
+          </GrupoInput>
+          <LeyendaError>Lorem  insuop hi jdolor mi gaer</LeyendaError>
+        </div>
+
+        <ContenedorTerminos>
+          <Label>
+            <input type="checkbox" name="" id="terminos"/>
+            Acepto los términos de condiciones y restricciones
+          </Label>
+        </ContenedorTerminos>
+
+        {false && <MensajeError>
+          <p> 
+            <FontAwesomeIcon icon={faExclamationTriangle} />
+            <b>Error</b>: Por favor rellena el formulario correctamente
+          </p>
+        </MensajeError>}
+
+        <ContenedorBotonCentrado>
+            <Boton type="submit">Enviar</Boton>
+            <MensajeExito>Las respuestas se han enviado con éxito</MensajeExito>
+        </ContenedorBotonCentrado>
+
+      </Formulario>
+    
+    </main>
+  );
+};
+
+
+export default App
