@@ -5,7 +5,7 @@ const colores = {
 
     borde: "#0075FF",
     error: "#F66060",
-    exito: "#1ed12d"
+    exito: "#1ed12d",
 }
 
 const Formulario = styled.form` 
@@ -14,7 +14,7 @@ const Formulario = styled.form`
     gap: 20px;
     
     @media (max-width: 800px) {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
     }
 `;
 
@@ -66,7 +66,7 @@ const IconoValidacion = styled(FontAwesomeIcon)`
     bottom: 14px;
     z-index: 100;
     font-size: 16px;
-    opacity: 0;
+    opacity: 0;  
 `;
 
 
@@ -104,8 +104,8 @@ const Boton = styled.button`
 
 const MensajeExito =styled.p`
  font-size: 14px;
- color: ${colores.exito}
- display: none
+ color: ${colores.exito};
+ display: none;  
 `;
 
 const MensajeError = styled.div` 
@@ -120,8 +120,8 @@ const MensajeError = styled.div`
     };
 
   b{
-      margin-left: 5px
-  }
+      margin-left: 5px;
+  };
 `;
 
 

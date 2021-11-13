@@ -1,9 +1,10 @@
 import React from 'react';
 import './Estilos.css';
-import { Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos,
+import { Formulario, Label, ContenedorTerminos,
 ContenedorBotonCentrado, Boton, MensajeExito, MensajeError  } from './Elementos/Formulario';
-import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import  Input  from './Components/Input';
 
 const App = () => {
   return (
@@ -12,14 +13,7 @@ const App = () => {
       
       <Formulario action="">
 
-        <div>
-          <Label htmlFor="">Nombre</Label>
-          <GrupoInput>
-            <Input type= "text" placeholder="Nombre"/>
-            <IconoValidacion icon={faCheckCircle}/>
-          </GrupoInput>
-          <LeyendaError>Lorem  insuop hi jdolor mi gaer</LeyendaError>
-        </div>
+        <Input/>
 
         <ContenedorTerminos>
           <Label>
